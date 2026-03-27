@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+✈️ Sky Control Hub
+Sistema de monitoramento e gestão de tráfego aéreo desenvolvido em React + TypeScript. O projeto simula o controle de pátio e aproximação de aeronaves em tempo real.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Funcionalidades
+Monitoramento em Tempo Real: Atualização automática de combustível e tempo estimado de pouso (ETA).
 
-Currently, two official plugins are available:
+Gestão de Operações: Autorização de pouso, decolagem e controle de taxiamento.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Radar Dinâmico: Novas aeronaves entram no setor de aproximação a cada 30 segundos.
 
-## React Compiler
+Log de Comunicações: Registro visual (Radio Comm) de todas as ações da torre e solo.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Interface Responsiva: Layout componentizado utilizando Bootstrap 5.
 
-## Expanding the ESLint configuration
+🛠️ Tecnologias
+React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+TypeScript
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Bootstrap 5
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+CSS3 Custom Animations
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📂 Estrutura de Pastas
+Plaintext
+src/
+├── components/      # Componentes visuais (Header, Sidebar, Card)
+├── interfaces/      # Tipagens e Contratos (IAeronave)
+├── styles/          # Estilização Global e Customizada
+└── App.tsx          # Lógica central e orquestração do sistema
+🧑‍💻 Autor
+Desenvolvedor: Diego Marques Miranda
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Data: 13/04/2026
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Disciplina: Desenvolvimento de Software Web
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Professor: Alexandre Almeida
