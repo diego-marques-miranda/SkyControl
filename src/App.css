@@ -1,14 +1,19 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh; /* Garante que o app ocupe pelo menos a tela toda */
+  width: 100%;
 }
 
 .main-content {
-  flex: 1;
-  overflow-y: auto;
+  flex: 1 0 auto;
   padding-bottom: 2rem;
+}
+
+.footer-sistema {
+  flex-shrink: 0;
+  border-top: 3px solid #ffc107;
+  width: 100%;
 }
 
 .bg-radar {
@@ -43,6 +48,9 @@ header {
   border-bottom: 4px solid #ffc107;
 }
 
-footer {
-  border-top: 3px solid #ffc107;
+@media (max-width: 768px) {
+  .main-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
